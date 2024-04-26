@@ -5,6 +5,20 @@
 This project enhances recruitment processes by integrating GPT-3.5 to automate resume screening, phone interviews, and overall candidate assessment. By incorporating AI, we aim to increase efficiency and elevate the quality of hires in today's dynamic recruitment landscape.
 ![WhatsApp Image 2024-04-26 at 12 03 45 PM](https://github.com/KumarAshish19/Robotgpt/assets/91791239/594fc6fb-ca9e-4af0-82b5-3c30689de786)
 
+<img width="263" alt="image" src="https://github.com/KumarAshish19/Robotgpt/assets/91791239/31cc428e-b4bb-4930-9095-546d3a0e1800">
+Uplaoded resume - 
+![2nddd](https://github.com/KumarAshish19/Robotgpt/assets/91791239/05094370-6577-4867-8729-8f377e3cbbec)
+![3rdd](https://github.com/KumarAshish19/Robotgpt/assets/91791239/74393a5a-a15c-4814-bf2f-390476572ffb)
+![4th](https://github.com/KumarAshish19/Robotgpt/assets/91791239/8b132394-c58c-4808-abe3-002cee233cb9)
+![5th](https://github.com/KumarAshish19/Robotgpt/assets/91791239/4fda75b8-24a5-4f77-9ae3-75696f9cbc6b)
+![6th](https://github.com/KumarAshish19/Robotgpt/assets/91791239/54eea87b-f2a1-4711-a946-7379c079726f)
+
+
+
+
+
+
+
 ## Key Features
 
 - **AI-Powered Resume Screening**: Analyzes resumes using the GPT-3.5 model to summarize and generate initial screening questions.
