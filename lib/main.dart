@@ -3,11 +3,11 @@ import 'package:robotgpt/Client.dart';
 
 void main()
 {
-  runApp(robotgpt());
+  runApp(RobotGpt());
 }
 
-class robotgpt extends StatelessWidget {
-  const robotgpt({super.key});
+class RobotGpt extends StatelessWidget {
+  const RobotGpt({super.key});
 
   @override
   Widget build(BuildContext context) {
