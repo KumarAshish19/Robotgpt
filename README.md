@@ -3,6 +3,7 @@
 ## Overview
 
 This project enhances recruitment processes by integrating GPT-3.5 to automate resume screening, phone interviews, and overall candidate assessment. By incorporating AI, we aim to increase efficiency and elevate the quality of hires in today's dynamic recruitment landscape.
+![WhatsApp Image 2024-04-26 at 12 03 45 PM](https://github.com/KumarAshish19/Robotgpt/assets/91791239/594fc6fb-ca9e-4af0-82b5-3c30689de786)
 
 ## Key Features
 
