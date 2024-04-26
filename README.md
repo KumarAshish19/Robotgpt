@@ -19,6 +19,7 @@ This project enhances recruitment processes by integrating GPT-3.5 to automate r
 ## Usage
 
 This system includes two dashboards: one for applicants and another for recruiters.
+<img width="509" alt="Screenshot 2024-04-26 at 11 54 23 AM" src="https://github.com/KumarAshish19/Robotgpt/assets/91791239/e4424cb1-66a5-4207-af5a-b80144fb4f80">
 
 ### Step 1: Resume/CV Upload and Analysis
 - **Applicant**: Uploads their resume/CV.
@@ -32,6 +33,9 @@ This system includes two dashboards: one for applicants and another for recruite
 
 ### Step 4: Initial Screening Decision
 - **Decision**: Based on the LLM's analysis, recruiters decide whether to advance the candidate to the phone interview stage.
+
+### Step 6: Automates mail using Zapier
+- Candidates who pass the initial screening will automatically receive an email detailing their scheduled phone interview times, coordinated through AI-driven assessments.
 
 ### Step 5: Phone Interview
 - **Interview**: Conducts a tailored phone interview if the candidate's initial screening is successful.
