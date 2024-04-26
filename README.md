@@ -1,55 +1,44 @@
 # AI-Enabled Candidate Evaluation
----
+
 ## Overview
 
-This project aims to revolutionize the candidate selection process by leveraging LLM (GPT-3.5) and integrating an AI phone call interview. In the fast-paced world of recruitment, traditional methods can be inefficient and time-consuming. With the integration of AI, we streamline resume screening, phone interviews, and candidate evaluation, enhancing efficiency and improving the quality of hires.
+This project enhances recruitment processes by integrating GPT-3.5 to automate resume screening, phone interviews, and overall candidate assessment. By incorporating AI, we aim to increase efficiency and elevate the quality of hires in today's dynamic recruitment landscape.
 
----
 ## Key Features
 
-- **AI-Powered Resume Screening**: Utilizes the GPT-3.5 model to analyze resumes and provide a detailed summary, conclusion, and relevant questions for initial screening.
+- **AI-Powered Resume Screening**: Analyzes resumes using the GPT-3.5 model to summarize and generate initial screening questions.
   
-- **Automated Phone Interviews**: Conducts phone interviews having responsive AI on call, customizing tasks and greetings for a tailored candidate experience. The call recording as well as the transcript gets saved and can be passed again to the LLM for better final conclusion.
+- **Automated Phone Interviews**: Conducts AI-driven phone interviews that adapt to each candidate. Recordings and transcripts are analyzed to refine candidate evaluations.
 
-- **Interactive Chatbots**: AI-powered chatbots provide real-time responses to candidates' queries, enhancing their experience and engagement throughout the recruitment process.
+- **Interactive Chatbots**: Employs AI chatbots to answer candidate inquiries in real time, improving engagement and experience during the recruitment process.
 
-- **Personalized Candidate Recommendations**: AI analyzes candidates' profiles and preferences to recommend personalized job opportunities, improving the candidate matching process.
+- **Personalized Candidate Recommendations**: Utilizes AI to match candidates with personalized job opportunities based on their profiles and preferences.
 
-- **Onboarding and Training Plans**: AI assesses new hires' skills and identifies knowledge gaps, recommending targeted training programs to accelerate their integration into the company.
----
-
----
+- **Onboarding and Training Plans**: Identifies skill gaps in new hires and suggests customized training plans to facilitate efficient onboarding.
 
 ## Usage
 
-### Step 1: Resume/CV Upload and Extraction
+This system includes two dashboards: one for applicants and another for recruiters.
 
-- Upload the resume/CV and extract the text using the PyPDF library. The extracted text will be stored in a text file named “extracted_text.txt”.
+### Step 1: Resume/CV Upload and Analysis
+- **Applicant**: Uploads their resume/CV.
+- **Recruiter**: Receives and extracts the resume/CV data, viewing conclusions on their dashboard.
 
-### Step 2: Job Role Input
-
-- Specify the job role for which the candidate is being evaluated, assigning the {role} variable.
+### Step 2: Job Role Specification
+- **Recruiter**: Specifies the job role for evaluation, assigning the `{role}` variable.
 
 ### Step 3: Large Language Model (LLM) Analysis
+- **Analysis**: The extracted resume/CV and job role are analyzed using the `gpt-3.5-turbo-0125` model to derive a preliminary conclusion.
 
-- Pass the extracted resume/CV text and the specified job role to the "gpt-3.5-turbo-0125" model.
-  
 ### Step 4: Initial Screening Decision
-
-- Based on the LLM's final conclusion, decide whether to proceed with the application, completing the first phase of screening.
+- **Decision**: Based on the LLM's analysis, recruiters decide whether to advance the candidate to the phone interview stage.
 
 ### Step 5: Phone Interview
+- **Interview**: Conducts a tailored phone interview if the candidate's initial screening is successful.
 
-- Utilize the Bland.ai service to conduct a phone interview, customizing tasks and greetings for a tailored candidate experience.
-
-### Step 6: Final Conclusion
-
-- Provide the phone interview transcript to the LLM again to generate a final conclusion on the candidate's suitability for the role.
-
----
+### Step 6: Final Evaluation
+- **Conclusion**: The interview transcript is analyzed by the LLM to finalize the candidate's suitability for the position.
 
 ## License
 
-This project is licensed under the MIT License.
-
----
+This project is open-sourced under the MIT License.
