@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:robotgpt/Client.dart';
 
-void main()
-{
+void main() {
   runApp(RobotGpt());
 }
 
@@ -11,6 +10,9 @@ class RobotGpt extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: clientside(),);
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: clientside(),
+    );
   }
 }

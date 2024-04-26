@@ -23,11 +23,9 @@ class _clientsideState extends State<clientside> {
 
   Future<void> sendTextToAPI() async {
     final String apiUrl = 'https://1e30-103-4-220-252.ngrok-free.app/evaluate';
-
     print('Sending text to API: $apiUrl');
     print('Headers: Content-Type: application/json');
     print('Body: Role: security guard watchman, Information: $doctext');
-
     try {
       final http.Response response = await http.post(
         Uri.parse(apiUrl),
@@ -81,9 +79,9 @@ class _clientsideState extends State<clientside> {
   Widget build(BuildContext context) {
     screensize = MediaQuery.of(context).size;
 
-    return SafeArea(
-      child: Scaffold(
-        body: SingleChildScrollView(
+    return Scaffold(
+      body: SafeArea(
+        child: SingleChildScrollView(
           child: Column(
             children: [
               Container(
@@ -91,6 +89,9 @@ class _clientsideState extends State<clientside> {
                 width: double.infinity,
                 child: Column(
                   children: [
+                    SizedBox(
+                      height: 20,
+                    ),
                     Center(
                       child: Text(
                         "Welcome to ",
@@ -103,12 +104,12 @@ class _clientsideState extends State<clientside> {
                     ),
                     Center(
                       child: Text(
-                        "RoboHire!",
+                        "Hire.ai!",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             fontSize: 40,
                             fontWeight: FontWeight.bold,
-                            color: Colors.lightBlueAccent),
+                            color: Color(0xff4F6F52)),
                       ),
                     ),
                   ],
@@ -130,12 +131,12 @@ class _clientsideState extends State<clientside> {
                     height: 100,
                     width: double.infinity,
                     decoration: BoxDecoration(
-                        border:
-                            Border.all(width: 5, color: Colors.lightBlueAccent),
+                        border: Border.all(width: 5, color: Color(0xff4F6F52)),
                         borderRadius: BorderRadius.all(Radius.circular(20))),
                     child: Center(
                       child: Icon(
                         Icons.upload_file,
+                        color: Color(0xff4F6F52),
                         size: 50,
                       ),
                     ),
@@ -144,15 +145,67 @@ class _clientsideState extends State<clientside> {
               ),
               SizedBox(height: 10),
               ElevatedButton(
-                  onPressed: () {
-                    getPDFtext(filepath);
-                  },
-                  child: Text("Get Text")),
+                onPressed: () {
+                  getPDFtext(filepath);
+                },
+                style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(
+                        Color(0xff5F8670)), // Custom color
+                    foregroundColor: MaterialStateProperty.all<Color>(
+                        Colors.white), // Text color
+                    padding: MaterialStateProperty.all(EdgeInsets.symmetric(
+                        horizontal: 30, vertical: 10)), // Button padding
+                    textStyle: MaterialStateProperty.all<TextStyle>(TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold) // Text style
+                        ),
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                      borderRadius:
+                          BorderRadius.circular(20.0), // Rounded corners
+                    ))),
+                child: Text("Get Text"),
+              ),
               Container(
-                child: Text("${doctext ?? 'No text extracted yet.'}"),
+                padding: EdgeInsets.symmetric(
+                    vertical: 10, horizontal: 10), // Adds space around the text
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Color(0xff4F6F52),
+                      borderRadius: BorderRadius.circular(20)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Text(doctext ?? 'No text extracted yet.',
+                        style: TextStyle(
+                            fontSize: 16,
+                            color: Color(0xffE8DFCA),
+                            fontWeight: FontWeight.bold)),
+                  ),
+                ),
               ),
               ElevatedButton(
-                  onPressed: sendTextToAPI, child: Text("Send Text")),
+                onPressed: sendTextToAPI,
+                style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(
+                        Color(0xff4F6F52)), // Custom color
+                    foregroundColor: MaterialStateProperty.all<Color>(
+                        Color(0xffE8DFCA)), // Text color
+                    padding: MaterialStateProperty.all(EdgeInsets.symmetric(
+                        horizontal: 30, vertical: 10)), // Button padding
+                    textStyle: MaterialStateProperty.all<TextStyle>(TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold) // Text style
+                        ),
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                      borderRadius:
+                          BorderRadius.circular(20.0), // Rounded corners
+                    ))),
+                child: Text(
+                  "Send Text",
+                  style: TextStyle(color: Color(0xffE8DFCA)),
+                ),
+              ),
             ],
           ),
         ),
